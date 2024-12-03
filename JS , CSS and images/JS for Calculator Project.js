@@ -114,13 +114,17 @@ function updateCalculation(value) {
     calculation;
     
   } else if (
+    calculation.slice(-2) === '(-' && value === '+'
+  ) {
+    calculation;
+  } else if (
     value === ')' && calculation.lastIndexOf(')') > calculation.lastIndexOf('(')
   ) {
-    calculation
+    calculation;
   } else if (
     value === '(' && calculation.lastIndexOf('(') > calculation.lastIndexOf(')')
   ) {
-    calculation
+    calculation;
   } else if (calculation === 'Cannot divide by zero') {
     calculation = '';
     calculation += value;
